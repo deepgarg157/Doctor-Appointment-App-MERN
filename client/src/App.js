@@ -7,6 +7,8 @@ import { Toaster } from 'react-hot-toast'
 import axios from 'axios'
 import { useSelector } from "react-redux"
 import Spinner from './components/Spinner'
+import ProtectedRoute from './components/ProtectedRoute'
+import PublicRoute from './components/PublicRoute'
 
 // server localhost path
 axios.defaults.baseURL = 'http://localhost:5000'
@@ -20,9 +22,27 @@ function App() {
         <Toaster position='center-top' toastOptions={{ duration: 4000 }} />
         {loading ? <Spinner /> :
           <Routes>
-            <Route path="/" element={<HomePage />}></Route>
-            <Route path="/register" element={<Register />}></Route>
-            <Route path="/login" element={<Login />}></Route>
+
+            <Route
+              path="/"
+              element={
+                <ProtectedRoute>
+                  <HomePage />
+                </ProtectedRoute>
+              }></Route>
+
+            <Route path="/register" element={
+              <PublicRoute>
+                <Register />
+              </PublicRoute>
+            }></Route>
+
+            <Route path="/login" element={
+              <PublicRoute>
+                <Login />
+              </PublicRoute>
+            }></Route>
+
           </Routes>}
       </BrowserRouter>
     </>

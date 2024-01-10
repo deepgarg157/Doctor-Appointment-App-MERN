@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
 import axios from 'axios'
+import Layout from '../components/Layout'
 
 const HomePage = () => {
 
   // login user data
 
   const getUserData = async () => {
-    
     try {
       await axios.post('/api/v1/user/getUserData', {}, {
         headers: {
@@ -23,7 +23,9 @@ const HomePage = () => {
   }, [])
   return (
     <div>
-      HomePage
+      <Layout>
+        HomePage
+      </Layout>
     </div>
   )
 }

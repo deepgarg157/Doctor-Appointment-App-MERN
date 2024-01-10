@@ -1,0 +1,76 @@
+.main{
+    padding: 10px;
+}
+
+.layout{
+    display: flex;
+}
+
+.sidebar{
+    width: 300px;
+    min-height: 100vh;
+    background-color: rgb(152, 247, 220);
+    border-radius: 5px;
+}
+
+.doc-app{
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 5px;
+    font-weight: 500;
+}
+
+.content{
+    margin-left: 10px;
+    width: 100%;
+    height: 100vh;
+}
+
+.content .headers{
+    background-color: rgb(205, 237, 237);
+    height: 15%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.content .headers i{
+    margin-right: 15px;
+    font-size: 25px
+}
+
+.content .headers a{
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.content .body{
+    background-color: rgb(205, 237, 237);
+    height: 83%;
+    border-radius: 5px;
+    margin-top: 15px
+}
+
+.menu-items{
+    margin-top: 40px;
+    margin-left: 30px;
+    font-size: 1.2rem;
+}
+
+.menu-items a{
+    text-decoration: none;
+}
+
+.menu-items i{
+    margin-right: 15px;
+}
+
+.active{
+    background-color: white;
+}
+
+.active a{
+    color: black;
+}

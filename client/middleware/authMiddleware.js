@@ -9,10 +9,9 @@ const requireAuth = (req, res, next) => {
                     success: false,
                     message: 'Auth is failed'
                 })
-            }
+            } 
             else {
                 req.body.userId = decode.id
-                console.log(req.body.userId)
                 next()
             }
         })
