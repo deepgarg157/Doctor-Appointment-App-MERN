@@ -17,6 +17,7 @@ mongoose.connect(process.env.MongoDB_URL)
 // Route
 const userRoutes = require('./Routes/userRoutes')
 app.use('/api/v1/user',  userRoutes)
+app.use("/api/v1/admin", require("./Routes/adminRoutes"));
 
 // static file
 app.use(express.static(path.join(__dirname, "./client/build")))
